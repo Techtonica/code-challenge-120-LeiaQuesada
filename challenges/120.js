@@ -38,9 +38,25 @@
 //
 
 function groupBy(arr, logic){
-  return(
-    // replace this line with your code
-  );
+  // return an object of keys with it's value as an array
+  let resultObj = {};
+  // iterate through the array elements, to check for multiple keys
+  for (element in arr) {
+    // apply logic arg
+    let property = logic(element);
+    if(resultObj.hasOwnProperty(property)) {
+      let value = resultObj[property];
+      value.push(element);
+    } else {
+      // need to create an empty array for next key
+      resultObj[property] = [];
+      let property = resultObj[property];
+      property.push(element);
+    }
+  }
+    // console.log("i'm confused", resultObj);
+    return resultObj;
 }
+
 
 module.exports = groupBy;
