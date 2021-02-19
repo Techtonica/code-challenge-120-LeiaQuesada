@@ -41,7 +41,7 @@ function groupBy(arr, logic){
   // return an object of keys with it's value as an array
   let resultObj = {};
   // iterate through the array elements, to check for multiple keys
-  for (element in arr) {
+  for (let element of arr) {
     // apply logic arg
     let property = logic(element);
     if(resultObj.hasOwnProperty(property)) {
@@ -50,8 +50,8 @@ function groupBy(arr, logic){
     } else {
       // need to create an empty array for next key
       resultObj[property] = [];
-      let property = resultObj[property];
-      property.push(element);
+      let value = resultObj[property];
+      value.push(element);
     }
   }
     // console.log("i'm confused", resultObj);
