@@ -58,23 +58,24 @@ function groupBy(arr, logic){
     return resultObj;
 }
 
-pomeranians = [
-  { name: 'Osito', weight_kg: 3.5 },
-  { name: 'Maní', weight_kg: 3.9 },
-  { name: 'Bella', weight_kg: 7.2 }
-]
-groupBy(pomeranians, (p) => Math.floor(p.weight_kg))
-/*
- {
-  '3': [
-        { name: 'Osito', weight_kg: 3.5 },
-        { name: 'Maní', weight_kg: 3.9 }
-      ],
-  '7': [{ name: 'Bella', weight_kg: 7.2 }]
- }
-*/
+// pomeranians = [
+//   { name: 'Osito', weight_kg: 3.5 },
+//   { name: 'Maní', weight_kg: 3.9 },
+//   { name: 'Bella', weight_kg: 7.2 }
+// ]
+// groupBy(pomeranians, (p) => Math.floor(p.weight_kg))
+// /*
+//  {
+//   '3': [
+//         { name: 'Osito', weight_kg: 3.5 },
+//         { name: 'Maní', weight_kg: 3.9 }
+//       ],
+//   '7': [{ name: 'Bella', weight_kg: 7.2 }]
+//  }
+// */
 
-groupBy(['one', 'two', 'three'], (s) => s.length);
-// => { '3': ['one', 'two'], '5': ['three'] }
+// groupBy(['one', 'two', 'three'], (s) => s.length);
+// // => { '3': ['one', 'two'], '5': ['three'] }
+
 
 module.exports = groupBy;
